@@ -1,0 +1,36 @@
+
+.JustifyContenCenter {
+    justify-content: center;
+}
+
+.OptionButton {
+    margin-top: 10px !important;
+    width: 100%;
+    text-align: center;
+}
+
+.VerticalAlignCenter {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+}
+
+.FullHeight {
+    height: 100vh;
+}
+
+.LeaderboardCardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+    flex-grow: 100;
+}
+
+.LeaderboardCardScore {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px;
+    text-align: center;
+}
