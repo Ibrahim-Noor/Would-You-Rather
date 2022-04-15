@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Grid } from '@mui/material';
 import { QuestionsList } from './QuestionsList';
 import { Loading } from '../../shared/components/Loading';
+import Container from '@mui/material/Container';
 
 function TabPanel(props) {
     const {children, value, index, ...other} = props;
@@ -20,21 +19,17 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box sx={{p: 3}}>
-                    <Typography>{children}</Typography>
-                </Box>
+                <Container sx={{ p: 3 }}>
+                    <Box>
+                        {children}
+                    </Box>
+                </Container>
             )}
         </div>
     );
 }
 
-TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.number.isRequired,
-    value: PropTypes.number.isRequired,
-};
-
-function a11yProps(index) {
+const a11yProps = index => {
     return {
         id: `simple-tab-${index}`,
         'aria-controls': `simple-tabpanel-${index}`,
