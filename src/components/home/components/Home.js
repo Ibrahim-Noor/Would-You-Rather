@@ -7,7 +7,7 @@ import { QuestionsList } from './QuestionsList';
 import { Loading } from '../../shared/components/Loading';
 import Container from '@mui/material/Container';
 
-function TabPanel(props) {
+const TabPanel = props => {
     const {children, value, index, ...other} = props;
 
     return (
